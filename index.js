@@ -8,7 +8,7 @@ $(function() {
   // console.log will log a message or object to the browser developer console
   console.log("page loaded...");
 
-  $(type="button").click(myFunction);
+  $(type="button").click(fetchRandomTriviaQuestion(displayQuestionAndAnswer));
   /*
    * TODO: You will need to use a css selector to get jQuery to find the button element in the page
    * Then you will need to make a new javascript function to do stuff for when the button
@@ -18,7 +18,9 @@ $(function() {
   });
 
 function myFunction(){
-  $("results-area").text("Cheese");
+  $("#results-area").text("Cheese");
+  $("#question-display").text("");
+  $("#answer-display").text("");
 }
 
 function displayQuestionAndAnswer(question, answer) {
